@@ -18,7 +18,7 @@ public class UserService {
         User newUser = User.builder()
                 .username(registerRequest.getUsername())
                 .password(passwordEncoder.encode(registerRequest.getPassword()))
-                .role(registerRequest.getRole())
+                .roles(registerRequest.getRole())
                 .build();
         userRepository.save(newUser);
     }
